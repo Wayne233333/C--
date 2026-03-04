@@ -16,6 +16,7 @@ printf("%.2lf\n",pow(pow(a - c ,2) + pow(b - d ,2),0.5))
 cin>>a>>b;
 scanf("%d%d",&a ,&b);
 while(getline(cin,s));        #string s,读一行
+string类型均用cin、cout、getline等
 ...
 
 
