@@ -9,7 +9,7 @@ private:
     double x;
     double y;
 
-    void Respone(){
+    void Response(){
 
         printf("Success!\n");
     }
@@ -30,9 +30,9 @@ public:
         printf("%.2lf %.2lf %.2lf\n", x, y, z); //私有公有均可访问
     }
 
-    void Respone2(){
+    void Response2(){
 
-        Respone();
+        Response();
     }
 
 };
@@ -47,5 +47,5 @@ int main(){
     printf("%.2lf\n",a.z);
 
     //a.Respone();    报错：私有成员不可访问
-    a.Respone2();
+    a.Response2();
 }

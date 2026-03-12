@@ -4,8 +4,8 @@ using namespace std;
 
 struct point{
 
-    double x;
-    double y;
+    int x;
+    int y;
 };
 
 bool cmp(const point &a, const point &b){
@@ -14,13 +14,20 @@ bool cmp(const point &a, const point &b){
     return a.y > b.y;
 }
 
-void sort(point a[], int n){    //冒泡排序
+void sort_bubble(point a[], int n){    //冒泡排序
 
+    int temp;
     for(int i = 1; i < n; i++){
         for(int j = 1; j < n-i+1; j++){
             if(cmp(a[j], a[j+1])){
 
-                swap(a[j], a[j+1]);
+                temp = a[j].x;
+                a[j].x = a[j+1].x;  
+                a[j+1].x = temp;
+
+                temp = a[j].y;
+                a[j].y = a[j+1].y;
+                a[j+1].y = temp;
             }
         }
     }
@@ -32,9 +39,9 @@ int n;
 int main(){
 
     scanf("%d", &n);
-    for(int i = 1; i <= n; i++) scanf("%lf%lf", &a[i].x, &a[i].y);
+    for(int i = 1; i <= n; i++) scanf("%d%d", &a[i].x, &a[i].y);
 
-    sort(a, n);
+    sort_bubble(a, n);
 
-    for(int i = 1; i <= n; i++) printf("%.2lf %.2lf\n", a[i].x, a[i].y);
+    for(int i = 1; i <= n; i++) printf("%d %d\n", a[i].x, a[i].y);
 }
