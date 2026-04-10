@@ -27,5 +27,5 @@ int main(){
     return 0;
 }
 
-//  g++.exe -fdiagnostics-color=always -g Date.cpp main.cpp -o main.exe
-//  ./main.exe
+//  g++.exe -fdiagnostics-color=always -g Date.cpp Date_main.cpp -o Date_main.exe
+//  ./Date_main.exe
