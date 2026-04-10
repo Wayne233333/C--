@@ -32,15 +32,3 @@ int main(){
     }
 
 }
-
-
-    // pool1.Design(12.2, 3.0);
-    // pool2.Design(5.0, 2.8);
-    // pool3.Design(4.8, 1.0);
-    // pool4.Design(6.0, 1.4);
-    // pool5.Design(8.7, 2.3);
-
-
-// Diameter of Swim pool: 12.2
-// Width of corridor: 3
-//          Total Costs: 181.584

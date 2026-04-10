@@ -15,7 +15,7 @@ public:
 
     Date(int y=2000, int m=1, int d=1, char c='-');
     ~Date();
-    void Set(int y,int m, int d);
+    void Set(int y,int m, int d, char c);
     void Set(const string& date);
     bool isLeapYear();
     void ShowDate();
