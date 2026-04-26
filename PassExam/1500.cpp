@@ -1,15 +1,15 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 int main(){
 
-    double n;
-    double ans;
+    long long n;
+    long long ans;
     cin >> n;
     while(n){
 
         ans = 1;
-        for(double i=n+2; i<=n*2; i++) ans = ans * i / (i-n);
-        printf("%.0f: %.0f\n",n ,ans);
+        for(long long i=1; i<=n; i++)   ans = ans * (4*i - 2) / (i + 1);
+        printf("%lld: %lld\n",n ,ans);
         cin >> n;
     }
     return 0;
