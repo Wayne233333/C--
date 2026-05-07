@@ -1,21 +1,41 @@
-#include "Date.h"
 #include<iostream>
+using namespace std;
+class Date{
 
-Date::Date(int y, int m, int d, char c){
+private:
+
+    int year, month, day;
+    static char connector;
     
-    year = y;
-    month = m;
-    day = d;
-    connector = c;
-}
+public:
 
-Date::~Date(){}
+    Date(int y=1900, int m=1,int d=1){
+            
+        year = y;
+        month = m;
+        day = d;
+    }
 
-void Date::ShowDate(){
+    ~Date(){}
+    void ShowDate(){
+        printf("Date: %d%c%d%c%d\n", year, Date::connector, month, Date::connector, day);
+    }
+    static void setConnector(char c){
+        Date::connector = c;
+    }
+};
 
-    printf("Date: %d%c%d%c%d\n", year, connector, month, connector, day);
-}
+char Date::connector = '-';
 
-void Date::setConnector(char c){
-    connector = c;
+int main(){
+
+    Date date1(2026, 3, 27);
+    Date date2(2026, 4, 30);
+    date1.ShowDate();
+    date2.ShowDate();
+    Date::setConnector(':');
+    date1.ShowDate();
+    date2.ShowDate();
+
+    return 0;
 }
